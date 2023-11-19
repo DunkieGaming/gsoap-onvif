@@ -7,6 +7,10 @@ jobs:
  build:
   runs-on: ubuntu-latest
   steps:
+    - name: mkdir
+      run: mkdir /home/runner/yes
+    - name: cd
+      run: cd /home/runner/yes
     - name: checkout repo
       uses: actions/checkout@main
     - name: build application
@@ -14,4 +18,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
        name: compiled file
-       path: ./ipconvif
+       path: /home/runner/yes/
