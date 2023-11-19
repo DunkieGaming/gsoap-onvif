@@ -11,3 +11,7 @@ jobs:
       uses: actions/checkout@main
     - name: build application
       run: make
+    - uses: actions/upload-artifact@v3
+      with:
+       name: compiled file
+       path: ./ipconvif
