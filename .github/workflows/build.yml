@@ -19,5 +19,5 @@ jobs:
       run: cp -r * /home/runner/yes/
     - uses: actions/upload-artifact@v3
       with:
-       name: compiled file
+       name: compiled_file
        path: /home/runner/yes/
